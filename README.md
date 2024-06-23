@@ -10,4 +10,4 @@ It works well and stably.
 
 The most complicated part to the find the cheapest number and implemet the best solution for the number.
 
-Kinda proud of myself to have finished this.
+Kinda proud of myself for having finished this.
