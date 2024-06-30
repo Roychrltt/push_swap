@@ -1,5 +1,7 @@
 # push_swap
 
+Validated on 23/06/2024
+
 125/100
 
 Time inversted: about 1 week.
