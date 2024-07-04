@@ -2,7 +2,7 @@ NAME = push_swap
 
 NAME_BONUS = checker
 
-CC = cc -Wall -Wextra -Werror
+CC = cc -Wall -Wextra -Werror -O2
 
 INC = -I ./includes/
 
@@ -29,25 +29,25 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME): $(LIBFT_LIB) $(OBJ)
-	@echo "$(CYAN)$(NAME)$(RESET) $(GREEN)creating...$(RESET)"
+	@echo "$(CYAN)$(BOLD)$(NAME)$(RESET) $(GREEN)creating...$(RESET)"
 	$(CC) $(INC) $(SRC) -L./libft -lft -o $(NAME)
-	@echo "$(CYAN)$(NAME)$(RESET) $(GREEN)created!$(RESET)"
+	@echo "$(CYAN)$(BOLD)$(NAME)$(RESET) $(GREEN)created!$(RESET)"
 
 bonus: $(LIBFT_LIB) $(OBJ_BONUS)
-	@echo "$(CYAN)$(NAME_BONUS)$(RESET) $(GREEN)creating...$(RESET)"
+	@echo "$(CYAN)$(BOLD)$(NAME_BONUS)$(RESET) $(GREEN)creating...$(RESET)"
 	$(CC) $(INC) $(SRC_BONUS) -L./libft -lft -o $(NAME_BONUS)
-	@echo "$(CYAN)$(NAME_BONUS)$(RESET) $(GREEN)created!$(RESET)"
+	@echo "$(CYAN)$(BOLD)$(NAME_BONUS)$(RESET) $(GREEN)created!$(RESET)"
 
 $(LIBFT_LIB):
-	$(MAKE) -C $(LIBFT)
+	$(MAKE) -sC $(LIBFT)
 
 clean:
-	$(MAKE) clean -C $(LIBFT)
+	$(MAKE) clean -sC $(LIBFT)
 	$(RM) $(OBJ) $(OBJ_BONUS)
 	@echo "$(GREEN)Cleaning finished!$(RESET)"
 
 fclean: clean
-	$(MAKE) fclean -C $(LIBFT)
+	$(MAKE) fclean -sC $(LIBFT)
 	$(RM) $(NAME) $(NAME_BONUS)
 	@echo "$(GREEN)Fcleaning finished!$(RESET)"
 
@@ -63,4 +63,5 @@ YELLOW = \033[33m
 BLUE = \033[34m
 MAGENTA = \033[35m
 CYAN = \033[36m
+BOLD = \033[1m
 RESET = \033[0m

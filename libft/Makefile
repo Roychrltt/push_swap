@@ -55,7 +55,7 @@ all: ${NAME}
 
 $(NAME): $(OBJ) libft.h
 	ar rc $(NAME) $(OBJ)
-	@echo "$(CYAN)$(NAME)$(RESET) $(GREEN)created!$(RESET)"
+	@echo "$(CYAN)$(BOLD)$(NAME)$(RESET) $(GREEN)created!$(RESET)"
 
 %.o: %.c libft.h
 	$(CC) -I. -c $< -o $@
@@ -84,4 +84,5 @@ YELLOW = \033[33m
 BLUE = \033[34m
 MAGENTA = \033[35m
 CYAN = \033[36m
+BOLD= \033[1m
 RESET = \033[0m
