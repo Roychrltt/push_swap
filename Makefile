@@ -30,20 +30,20 @@ all: $(NAME)
 
 $(NAME): $(LIBFT_LIB) $(OBJ)
 	@echo "$(CYAN)$(BOLD)$(NAME)$(RESET) $(GREEN)creating...$(RESET)"
-	$(CC) $(INC) $(SRC) -L./libft -lft -o $(NAME)
+	@$(CC) $(INC) $(SRC) -L./libft -lft -o $(NAME)
 	@echo "$(CYAN)$(BOLD)$(NAME)$(RESET) $(GREEN)created!$(RESET)"
 
 bonus: $(LIBFT_LIB) $(OBJ_BONUS)
 	@echo "$(CYAN)$(BOLD)$(NAME_BONUS)$(RESET) $(GREEN)creating...$(RESET)"
-	$(CC) $(INC) $(SRC_BONUS) -L./libft -lft -o $(NAME_BONUS)
+	@$(CC) $(INC) $(SRC_BONUS) -L./libft -lft -o $(NAME_BONUS)
 	@echo "$(CYAN)$(BOLD)$(NAME_BONUS)$(RESET) $(GREEN)created!$(RESET)"
 
 $(LIBFT_LIB):
-	$(MAKE) -sC $(LIBFT)
+	@$(MAKE) -sC $(LIBFT)
 
 clean:
-	$(MAKE) clean -sC $(LIBFT)
-	$(RM) $(OBJ) $(OBJ_BONUS)
+	@$(MAKE) clean -sC $(LIBFT)
+	@$(RM) $(OBJ) $(OBJ_BONUS)
 	@echo "$(GREEN)Cleaning finished!$(RESET)"
 
 fclean: clean

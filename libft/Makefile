@@ -54,23 +54,23 @@ CC = gcc -Wall -Wextra -Werror
 all: ${NAME}
 
 $(NAME): $(OBJ) libft.h
-	ar rc $(NAME) $(OBJ)
+	@ar rc $(NAME) $(OBJ)
 	@echo "$(CYAN)$(BOLD)$(NAME)$(RESET) $(GREEN)created!$(RESET)"
 
 %.o: %.c libft.h
-	$(CC) -I. -c $< -o $@
+	@$(CC) -I. -c $< -o $@
 
 bonus: ${OBJ_BONUS} libft.h
-	ar rc ${NAME} ${OBJ_BONUS}
+	@ar rc ${NAME} ${OBJ_BONUS}
 
 clean:
 	@echo "$(GREEN)Cleaning up...$(RESET)"
-	rm -rf ${OBJ} ${OBJ_BONUS}
+	@rm -rf ${OBJ} ${OBJ_BONUS}
 	@echo "$(GREEN)Clean finished!$(RESET)"
 
 fclean: clean
 	@echo "$(GREEN)Fcleaning up...$(RESET)"
-	rm -rf ${NAME}
+	@rm -rf ${NAME}
 	@echo "$(GREEN)Fclean finished!$(RESET)"
 
 re: fclean all
