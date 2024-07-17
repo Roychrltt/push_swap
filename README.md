@@ -15,3 +15,5 @@ It works well and stably.
 The most complicated part to the find the cheapest number and implemet the best solution for the number.
 
 Kinda proud of myself for having finished this.
+
+!(https://media.discordapp.net/attachments/1211695966026076201/1263184474976551002/image.png)
