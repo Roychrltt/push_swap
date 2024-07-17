@@ -16,4 +16,4 @@ The most complicated part to the find the cheapest number and implemet the best 
 
 Kinda proud of myself for having finished this.
 
-Average moves: around 4500
+### Average moves: around 4500
