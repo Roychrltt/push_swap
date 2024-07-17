@@ -6,7 +6,7 @@
 /*   By: xiaxu <xiaxu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 19:34:32 by xiaxu             #+#    #+#             */
-/*   Updated: 2024/06/22 20:45:17 by xiaxu            ###   ########.fr       */
+/*   Updated: 2024/07/17 19:26:17 by xiaxu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	push_until_three(int size, int median, t_node **a, t_node **b)
 	while (i < size - 3)
 	{
 		ps_pb(a, b);
-		if ((*b)->content > median)
+		if ((*b)->content > median && get_size(*b) != 1)
 			ps_rb(b);
 		i++;
 	}
