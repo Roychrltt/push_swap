@@ -17,3 +17,4 @@ The most complicated part to the find the cheapest number and implemet the best 
 Kinda proud of myself for having finished this.
 
 ### Average moves: around 4500
+!(https://github.com/user-attachments/assets/a356d421-d91c-4311-8368-2e3d451ed61c)
