@@ -8,11 +8,11 @@ Time inversted: about 1 week.
 
 This project uses the method [The Turk](https://medium.com/@ayogun/push-swap-c1f5d2d41e97). 
 
-Algo could be optimised but this program works well enough.
-
 It works well and stably.
 
-The most complicated part to the find the cheapest number and implemet the best solution for the number.
+The most complicated part is to find the cheapest number and to implement the best solution for the number.
+
+Algo could be optimised but this program works well enough.
 
 Kinda proud of myself for having finished this.
 
