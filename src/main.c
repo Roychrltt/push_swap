@@ -6,7 +6,7 @@
 /*   By: xiaxu <xiaxu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:45:00 by xiaxu             #+#    #+#             */
-/*   Updated: 2024/06/23 14:42:35 by xiaxu            ###   ########.fr       */
+/*   Updated: 2024/07/27 18:39:37 by xiaxu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,10 @@ int	main(int argc, char **argv)
 
 	if (argc == 1)
 		return (0);
-	if (argc > 2)
-		exit_error();
-	numbers = ft_split(argv[1], ' ');
+	if (argc == 2)
+		numbers = ft_split(argv[1], ' ');
+	else
+		numbers = ++argv;
 	if (!numbers)
 		exit_error();
 	is_valid_number(numbers);
@@ -87,5 +88,6 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	push_swap(numbers, &stack_a, &stack_b);
 	clear_stack(&stack_a);
-	clear_tab(numbers);
+	if (argc == 2)
+		clear_tab(numbers);
 }
